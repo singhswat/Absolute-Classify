@@ -1,0 +1,20 @@
+modules:
+  jira:projectSettingsPage:
+    - key: absolute-classify-hello-world-project-settings-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Absolute Classify
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/9b524348-f7a3-4bae-b772-3d0f1cb59c2a
